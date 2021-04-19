@@ -1,0 +1,30 @@
+.searchpage{
+    flex: 0.50;
+    background-color: #f9f9f9;
+    padding: 20px 20px;
+    min-width: 650px;
+    max-width: 871px;
+    object-fit: contain;
+}
+.searchpage_filter {
+    display: flex;
+    align-items: center;
+    color: lightblue;
+    font-size: xx-small !important;
+    
+}
+.searchpage_filter:hover{
+    color: black;
+}
+
+.searchpage_text {
+    margin-left: 10px;
+    font-size: 15px !important;
+}
+.searchpage > hr {
+    height: 1px;
+    border: 0;
+    background-color: lightgray;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

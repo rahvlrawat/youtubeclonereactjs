@@ -1,0 +1,17 @@
+.sidebar{
+    flex:0.08;
+    width:141px;
+    position: sticky;
+    top: 5vh;
+    left:0;
+    height:fit-content
+}
+
+.sidebar > hr{
+    height:1px;
+    border:0;
+    background-color:lightgray;
+    border: 10px;
+    margin-top:10px;
+   
+}

@@ -1,0 +1,24 @@
+.videoplayer {
+    display: flex;
+    justify-content: center;
+    margin-left: 50px;  
+}
+
+.videoplayer_videodetails {
+    flex: 0.7;
+}
+
+
+.videoplayer_suggested {
+    flex: 0.3;
+    margin-top: 0 !important;
+}
+
+.videoplayer_videoinfo {
+    flex-direction: row;
+}
+
+.videoinfo_channeldesc {
+    color: gray;
+    font-size: small;
+}
