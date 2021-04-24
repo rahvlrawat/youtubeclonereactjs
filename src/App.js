@@ -1,9 +1,9 @@
 import './App.css';
-import Header from './Header';
-import Sidebar from './Sidebar';
-import Recommended from './Recommended';
-import SearchPage from './SearchPage'
-import VideoPlayer from './VideoPlayer'
+import Header from './Components/Header/Header';
+import Sidebar from './Components/Sidebar/Sidebar';
+import Recommended from './Components/Recommended/Recommended';
+import SearchPage from './Components/SearchPage/SearchPage'
+import VideoPlayer from './Components/VideoPlayer/VideoPlayer'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 function App() {

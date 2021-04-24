@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import {useParams} from 'react-router';
 import Video from './Video'
 import './VideoPlayer.css';
-import Recommended from './Recommended';
-import VideoInfo from './VideoInfo';
+import Recommended from '../Recommended/Recommended';
+import VideoInfo from '../VideoInfo/VideoInfo';
 import axios from 'axios';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Alert from '@material-ui/lab/Alert';

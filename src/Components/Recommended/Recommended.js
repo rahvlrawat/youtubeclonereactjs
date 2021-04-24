@@ -1,6 +1,6 @@
 import React,{useEffect, useState} from 'react';
 import './Recommended.css';
-import VideoCard from './VideoCard.js';
+import VideoCard from '../VideoCard/VideoCard.js';
 import axios from 'axios';
 import {DateTime} from 'luxon';
 import {Link} from 'react-router-dom';
