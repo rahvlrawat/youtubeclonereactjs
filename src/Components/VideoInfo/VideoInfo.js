@@ -1,11 +1,11 @@
 import React,{useState}  from 'react';
+import './VideoInfo.css';
+import SidebarRow from '../SidebarRow/SidebarRow';
 import ThumbUpIcon from '@material-ui/icons/ThumbUp';
 import ThumbDownIcon from '@material-ui/icons/ThumbDown';
-import SidebarRow from './SidebarRow';
 import ReplyIcon from '@material-ui/icons/Reply';
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import PlaylistAddIcon from '@material-ui/icons/PlaylistAdd';
-import './VideoInfo.css';
 import { Avatar, Button } from '@material-ui/core';
 
 const VideoInfo = ({title, description, publishedDate, channelTitle, channelImage, viewCount, likeCount, dislikeCount, subs}) => { 
