@@ -10,12 +10,9 @@ function Recommended() {
     const [videoCards, setVideoCards] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [isError, setIsError] = useState(false);
-    // const [musicVideoCards, setMusicVideoCards] = useState([]);
-    // const [sportsVideoCards, setSportsVideoCards] = useState([]);
-    // const [techVideoCards, setTechVideoCards] = useState([]);
+
     
     useEffect(() => {
-        
         axios
           .get(`https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=18&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`)
           .then(response => {
