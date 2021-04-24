@@ -11,6 +11,7 @@
 #api keys
 .env
 .keys.txt
+.youtubish.cfg
 # production
 /build
 
