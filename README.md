@@ -1,13 +1,11 @@
 # About
 This repository is the source code for the Youtube clone using React js.
 
-<hr/>
 # Screenshots
 UI-wise some changes has been made for user accessibility else functionality is  almost exactly like the original Youtube application
 
 It uses real data by leveraging the Youtube Data API v3.
 
-<hr/>
 #  How to run this application
 
 This application loads information using the [Youtube Data API v3](https://developers.google.com/youtube/v3/docs/).
@@ -126,7 +124,7 @@ yarn start
 
 **Make sure to not commit your file to Git!**
 
-<hr/>
+
 
 #  Features
 
@@ -137,7 +135,7 @@ This application includes the major features of Youtube such as
 - watching videos
 - displaying video details
 
-# 7 Used technologies
+#  Used technologies
 
 - [React / create-react-app](https://github.com/facebook/create-react-app)
 - CSS Grid / Flexbox
