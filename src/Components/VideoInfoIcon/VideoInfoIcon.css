@@ -1,0 +1,32 @@
+.VideoInfoRow{
+    display:flex;
+    align-items:center;
+    padding:5px 5px;
+    color: grey;
+}
+.VideoInfoRow:hover{
+    color: black;
+    cursor:pointer
+}
+
+.VideoInfoRow:hover>.VideoInfoRow_icon{
+    color:black;
+    background-color:None
+
+}
+
+
+
+.VideoInfoRow_icon{
+    font-size: small !important;
+}
+
+.VideoInfoRow_title{
+    flex:1;
+    margin-left:10px;
+    font-size:12px;
+    font-weight:500
+}
+
+
+

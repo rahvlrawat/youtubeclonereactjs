@@ -67,21 +67,20 @@ button {
   
   /* Dropdown button */
   .dropdown .dropbtn {
-    font-size: 16px;
+    font-size: 10px;
     border: none;
     outline: none;
     /* color: white; */
-    padding: 14px 16px;
+    padding: 0px 5px;
     background-color: inherit;
     font-family: inherit; /* Important for vertical align on mobile phones */
     margin: 0; /* Important for vertical align on mobile phones */
   }
   
-  /* Add a red background color to navbar links on hover */
+  
   .navbar a:hover, .dropdown:hover .dropbtn {
-    background-color:black;
-    border-radius: 50%;
-    color: white;
+    background-color:grey;
+    color:white;
   }
   
   /* Dropdown content (hidden by default) */
@@ -113,7 +112,7 @@ button {
 
   /* Add a grey background color to dropdown links on hover */
   .dropdown-content ul:hover {
-    background-color:black;
+    background-color:grey;
     color: white;
   }
   
