@@ -111,9 +111,10 @@ function SearchPage() {
                 <TuneIcon/>
                 <h2 >FILTER</h2>
             </div>
-            {
-            isLoading ? <CircularProgress className='loading' color='secondary'/> : null
-        }
+           { isLoading ? <div className='loading'>
+            <CircularProgress  color='secondary' /> 
+                    <h2>Loading ...</h2>
+                    </div>: null }
             <hr/> {
             !isLoading ? <ChannelRow 
                 channelId={

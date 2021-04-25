@@ -5,7 +5,6 @@ import './VideoPlayer.css';
 import Recommended from '../Recommended/Recommended';
 import VideoInfo from '../VideoInfo/VideoInfo';
 import axios from 'axios';
-import CircularProgress from '@material-ui/core/CircularProgress';
 import Alert from '@material-ui/lab/Alert';
 
 function  VideoPlayer(){
@@ -71,8 +70,10 @@ function  VideoPlayer(){
         <div className='videoplayer'>
             <div className='videoplayer_videodetails'>
                 <div className='videoplayer_video'>
-                    {isLoading ? <CircularProgress className='loading' color='secondary'/> : <Video videoId={videoId} /> }
-                </div>
+                    
+                    {isLoading ? null : <Video videoId={videoId} /> }
+    
+                     </div>
                 <div className='videoplayer_videoinfo'>
                     {
                     !isLoading ? <VideoInfo
@@ -89,7 +90,9 @@ function  VideoPlayer(){
                     }
                 </div>
             </div>
+            
             <div className='videoplayer_suggested'>
+                <h2>Up Next</h2>   
                 <Recommended/>
             </div>
         </div>

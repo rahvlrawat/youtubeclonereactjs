@@ -11,7 +11,7 @@
     align-items: center;
     color: lightblue;
     font-size: xx-small !important;
-    
+    justify-content: space-between;
 }
 .searchpage_filter:hover{
     color: black;
@@ -27,4 +27,9 @@
     background-color: lightgray;
     margin-top: 10px;
     margin-bottom: 10px;
+}
+.loading{
+    position: relative; /* or absolute */
+    top: 50%;
+    left: 50%;
 }

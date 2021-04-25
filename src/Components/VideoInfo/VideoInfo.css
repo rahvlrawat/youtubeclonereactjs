@@ -13,6 +13,7 @@
 .videoinfo_stats > p {
     font-size: medium;
     color: gray;
+    font-size: small;
 }
 
 .videoinfo_stats > * {
@@ -28,6 +29,8 @@
     display: flex;
     align-items: center;
 }
+
+
 
 hr {
     height: 1px;
@@ -58,9 +61,14 @@ hr {
     font-size: small;
     border: 10px;
     size: 12px;
-    
 }
 
+.videoInfo_TextLoader{
+    font-weight: bolder;
+    padding: 10px;
+    width:100%;
+    text-align: center;
+}
 
 .videoinfo_channelsubs {
     color: gray;

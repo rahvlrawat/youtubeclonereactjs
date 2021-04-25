@@ -5,7 +5,7 @@
     color:grey
 }
 .sidebarRow:hover{
-    background-color:black;
+    background-color:grey;
     color: white;
     cursor:pointer
 }
@@ -32,7 +32,7 @@
 }
 
 .sidebarRow.selected{
-    background-color:black;
+    background-color:grey;
     color: white;
 }
 .sidebarRow.selected>.sidebarRow_icon{

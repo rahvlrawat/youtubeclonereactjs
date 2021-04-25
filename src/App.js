@@ -21,6 +21,7 @@ function App() {
 
                     <Route path="/video/:videoId">
                         <div className="app_page">
+                           <Sidebar/>
                             <VideoPlayer/>
                         </div>
                     </Route>

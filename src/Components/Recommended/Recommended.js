@@ -14,7 +14,7 @@ function Recommended() {
     
     useEffect(() => {
         axios
-          .get(`https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=18&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`)
+          .get(`https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=20&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`)
           .then(response => {
             createVideoCards(response.data.items);
           })
@@ -60,7 +60,10 @@ function Recommended() {
 
     return (
         <div className="recommended">
-          { isLoading ? <CircularProgress className='loading' color='secondary' /> : null }
+          { isLoading ? <div className='loading'>
+            <CircularProgress  color='secondary' /> 
+                        <h2>Loading ...</h2>
+                        </div>: null }
           
           <div className="recommended_videos">
                  { 
