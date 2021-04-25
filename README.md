@@ -1,78 +1,145 @@
-2 du: 
-- toggle sidebar 
-- improve folder structure
-- resize player for videos
-- adjust header and sidebar 
+# About
+This repository is the source code for the Youtube clone using React js.
 
-==================================================================================================================================
+<hr/>
+# Screenshots
+UI-wise some changes has been made for user accessibility else functionality is  almost exactly like the original Youtube application
 
-# Getting Started with Create React App
+It uses real data by leveraging the Youtube Data API v3.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<hr/>
+#  How to run this application
 
-## Available Scripts
+This application loads information using the [Youtube Data API v3](https://developers.google.com/youtube/v3/docs/).
 
-In the project directory, you can run:
+To use it, you need to set up a [Youtube Data v3 API key](https://productioncoder.com/build-youtube-in-react-part-19/) and run the project with `npm` or `yarn`.
 
-### `npm start`
+**Below, you'll find a step by step explanation**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## 4.1. Getting a Youtube Data API key
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+1. Head over to the [Google developers console](https://console.developers.google.com)
+2. Create a new project by clicking on `Select project` drop down right next to the logo. Click the `New Project` button an give it a speaking name.
+3. Select your project by choosing it in the `Select Dropdown` directly next to the logo in the header.
+4. Click the `Enable APIs and Services` button
+5. Search for `youtube data`
+6. Click on the `Youtube Data API v3`
+7. Click the blue enable button
+8. In the dashboard, click `Credentials` on the left sidebar
+9. Click the `Create Credential` button
+10. Which API are you using: `Youtube Data API v3`
+11. Where will you be calling the API from: `Web browser`
+12. What data are you accessing: `Public data`
+13. Click the `What credentials do I need button`
+14. Copy the API key
 
-### `npm test`
+## 4.2. Providinng the API key to your application
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 4.2.1 Option 1 - Environment variable (recommended)
 
-### `npm run build`
+Provide your Youtube Data API key with the `REACT_APP_YT_API_KEY` environment variable.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Create a `.env.local` file (alread gitignored) with
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+touch .env.local
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+and then define the `REACT_APP_YT_API_KEY` environment variable which is supposed to hold your `Youtube Data v3 API` key in the `.env.local` file like so:
 
-### `npm run eject`
+```
+REACT_APP_YT_API_KEY=AIzaxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 4.2.2 Option 2 - hardcode API key
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+As an alternative, you could just hardcode the API key in the `src/App.js` file.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+In general, we'd recommend going with the environment variable approach to **prevent you to accidentially commiting the API key go Git**.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+However, if you do want to hardcode the `Youtube Data API key`, you can head over to the `src/App.js` file and paste your API key in:
 
-## Learn More
+```
+const API_KEY = 'AIzaxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 4.3. Installing dependencies
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To install the dependencies run
 
-### Code Splitting
+```
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+With [yarn](https://yarnpkg.com/lang/en/)
 
-### Analyzing the Bundle Size
+```
+yarn install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 4.4 Running the application
 
-### Making a Progressive Web App
+### 4.4.1 Running locally with local env vars
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+You can run:
+```
+npm run dev
+```
 
-### Advanced Configuration
+which will source your `.env.local` file and then start then run `npm start`.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Note that if you change the value of the `.env.local` file, you need to run `npm run dev` again so that the new env var changes are picked up.
 
-### Deployment
+As an alternative, you can manually source the `.env.local` file with
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```
+source .env.local
+```
 
-### `npm run build` fails to minify
+and then run
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```
+npm start
+```
+
+You can also use [yarn](https://yarnpkg.com/lang/en/) to run the application.
+
+```
+yarn start
+```
+
+**If you close the terminal, you will need to source the file again. That's why it is recommended to just run `npm run dev` so you don't need to think about it**.
+
+### 4.4.2 Running locally with hardcoded Youtube API key
+
+If you copied and pasted the API key directly into the code, you do not need to source anything and you can just run:
+
+```
+npm start
+```
+
+If you are using [yarn](https://yarnpkg.com/lang/en/), you can do
+
+```
+yarn start
+```
+
+**Make sure to not commit your file to Git!**
+
+<hr/>
+
+#  Features
+
+This application includes the major features of Youtube such as
+
+- trending videos/recommended videos
+- searching for videos
+- watching videos
+- displaying video details
+
+# 7 Used technologies
+
+- [React / create-react-app](https://github.com/facebook/create-react-app)
+- CSS Grid / Flexbox
+- Firebase 
+- GitHub Actions
