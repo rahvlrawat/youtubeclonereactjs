@@ -14,7 +14,7 @@ To use it, you need to set up a [Youtube Data v3 API key](https://productioncode
 
 **Below, you'll find a step by step explanation**
 
-## 4.1. Getting a Youtube Data API key
+##  Getting a Youtube Data API key
 
 1. Head over to the [Google developers console](https://console.developers.google.com)
 2. Create a new project by clicking on `Select project` drop down right next to the logo. Click the `New Project` button an give it a speaking name.
@@ -31,9 +31,9 @@ To use it, you need to set up a [Youtube Data v3 API key](https://productioncode
 13. Click the `What credentials do I need button`
 14. Copy the API key
 
-## 4.2. Providinng the API key to your application
+##  Providinng the API key to your application
 
-### 4.2.1 Option 1 - Environment variable (recommended)
+###  Option 1 - Environment variable (recommended)
 
 Provide your Youtube Data API key with the `REACT_APP_YT_API_KEY` environment variable.
 
@@ -49,7 +49,7 @@ and then define the `REACT_APP_YT_API_KEY` environment variable which is suppose
 REACT_APP_YT_API_KEY=AIzaxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
-### 4.2.2 Option 2 - hardcode API key
+###  Option 2 - hardcode API key
 
 As an alternative, you could just hardcode the API key in the `src/App.js` file.
 
@@ -61,7 +61,7 @@ However, if you do want to hardcode the `Youtube Data API key`, you can head ove
 const API_KEY = 'AIzaxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx';
 ```
 
-## 4.3. Installing dependencies
+##  Installing dependencies
 
 To install the dependencies run
 
@@ -75,9 +75,9 @@ With [yarn](https://yarnpkg.com/lang/en/)
 yarn install
 ```
 
-## 4.4 Running the application
+##  Running the application
 
-### 4.4.1 Running locally with local env vars
+###  Running locally with local env vars
 
 You can run:
 ```
@@ -108,7 +108,7 @@ yarn start
 
 **If you close the terminal, you will need to source the file again. That's why it is recommended to just run `npm run dev` so you don't need to think about it**.
 
-### 4.4.2 Running locally with hardcoded Youtube API key
+###  Running locally with hardcoded Youtube API key
 
 If you copied and pasted the API key directly into the code, you do not need to source anything and you can just run:
 
