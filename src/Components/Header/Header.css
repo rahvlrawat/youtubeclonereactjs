@@ -47,7 +47,6 @@
 }
 .header_icon{
     display:flex;
-    margin-right:8px;
     position: relative;
     display: inline-block;
 }
@@ -81,6 +80,7 @@ button {
   .navbar a:hover, .dropdown:hover .dropbtn {
     background-color:grey;
     color:white;
+    
   }
   
   /* Dropdown content (hidden by default) */

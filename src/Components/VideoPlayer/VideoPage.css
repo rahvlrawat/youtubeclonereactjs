@@ -6,18 +6,24 @@
 }
 
 .videoplayer_videodetails {
-    flex: 0.7;
+    flex: 0.70;
     justify-content:center
 }
 
 
 .videoplayer_suggested {
-    flex: 0.3;
+    flex:0.20;
+    display:flex;
+    flex-direction:column;
     margin-top: 0 !important;
-    margin-left: 8px;
+    margin-right: 20px;
+
 }
 
-
+.videoplayer_video{
+    max-width:1180px; 
+ 
+}
 .videoplayer_videoinfo {
     flex-direction: row;
 }
@@ -28,16 +34,13 @@
 }
 .youtubeContainer {
     position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%;
-    overflow: hidden;
-    margin-bottom: 20px;
+  padding-bottom: 56.25%; /* 16:9 */
+  height: 0;
   }
   
   .youtubeContainer iframe {
-    width: 98%;
-    height: 98%;
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;

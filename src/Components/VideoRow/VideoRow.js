@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import './VideoRow.css'
 import Avatar from '@material-ui/core/Avatar'
-import MoreVertIcon from '@material-ui/icons/MoreVert';
+// import MoreVertIcon from '@material-ui/icons/MoreVert';
 import WatchLaterIcon from '@material-ui/icons/WatchLater';
 import AddToQueueIcon from '@material-ui/icons/AddToQueue';
 import {Link} from 'react-router-dom'
@@ -37,7 +37,8 @@ function VideoRow({
             return num;
         }
 
-        return (<div className="videoRow"
+        return (
+        <div className="videoRow"
             onMouseOver={onVideoRow}
             onMouseLeave={offVideoRow}>
             {
@@ -84,9 +85,7 @@ function VideoRow({
             <p className="videoRow_description">
                 {description}</p>
         </div>
-        <div> {
-            isVideoRow ? <MoreVertIcon className="videoRow_moreicon"/> : ''
-        } </div>
+       
     </div>
 
 

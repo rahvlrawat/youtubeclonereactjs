@@ -1,10 +1,12 @@
+
 .searchpage{
-    flex: 0.50;
+    flex: 0.70;
     background-color: #f9f9f9;
-    padding: 20px 20px;
+    padding: 20px 20px ;
     min-width: 650px;
-    max-width: 871px;
     object-fit: contain;
+    
+    
 }
 .searchpage_filter {
     display: flex;
@@ -33,3 +35,4 @@
     top: 50%;
     left: 50%;
 }
+
