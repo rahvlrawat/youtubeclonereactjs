@@ -4,8 +4,10 @@ import VideoCard from '../VideoCard/VideoCard.js';
 import axios from 'axios';
 import {DateTime} from 'luxon';
 import {Link} from 'react-router-dom';
-import CircularProgress from '@material-ui/core/CircularProgress';
+// import CircularProgress from '@material-ui/core/CircularProgress';
 import Alert from '@material-ui/lab/Alert';
+import Skeleton from 'react-loading-skeleton';
+
 function Recommended() {
     const [videoCards, setVideoCards] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
@@ -60,12 +62,18 @@ function Recommended() {
 
     return (
         <div className="recommended">
-          { isLoading ? <div className='loading'>
-            <CircularProgress  color='secondary' /> 
-                        <h2>Loading ...</h2>
-                        </div>: null }
+          { isLoading ? 
+
+          <div className='loading'>
           
-          <div className="recommended_videos">
+                  <Skeleton className="skeleton" height={240} width={285} count={20}  duration={2} >
+                   <Skeleton counts={2} duration={2}/> 
+                  </Skeleton>
+                
+                    </div>  
+                     
+                        :
+                        <div className="recommended_videos">
                  { 
                   videoCards.map(item => {
                     return (
@@ -83,7 +91,11 @@ function Recommended() {
                     )
                   })
                 } 
-            </div> 
+            </div>
+                        
+                        }
+          
+           
         </div>
     )
 }

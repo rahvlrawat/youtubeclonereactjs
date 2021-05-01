@@ -116,7 +116,7 @@ function SearchPage() {
                     <h2>Loading ...</h2>
                     </div>: null }
             <hr/> {
-            !isLoading ? <ChannelRow 
+            !isLoading ? <ChannelRow  
                 channelId={
                     channelRow.channelId
                 }

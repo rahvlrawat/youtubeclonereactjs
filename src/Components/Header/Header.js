@@ -7,11 +7,15 @@ import NotificationImportantIcon from '@material-ui/icons/NotificationImportant'
 import VideoCallIcon from '@material-ui/icons/VideoCall';
 import Avatar from '@material-ui/core/Avatar'
 import {Link} from 'react-router-dom';
-
+import { useHistory } from 'react-router-dom'
 
 function Header() {
     const [inputSearch, setInputSearch] = useState('');
-
+    const history = useHistory()
+   const handleSubmit = (e) => {
+      e.preventDefault()
+      history.push(`/search/${inputSearch}`)
+   }
     return (
         <div className="header">
 
@@ -22,7 +26,8 @@ function Header() {
                 </Link>
             </div>
 
-            <div className="header_input">
+            <form className="header_input" onSubmit={handleSubmit}>
+                
                 <input onChange={
                         (e) => setInputSearch(e.target.value)
                     }
@@ -34,7 +39,8 @@ function Header() {
                 }>
                     <SearchIcon className="header_search"/>
                 </Link>
-            </div>
+            </form>
+            
             <div className="header_icons">
 
                 <div className="dropdown">
@@ -44,7 +50,7 @@ function Header() {
                             title="Create"/></button>
                     {
                     
-                        <div class="dropdownVideo dropdown-content">
+                        <div class="dropdownVideo dropdown-content dropdown-rightmost">
                             <ul>Upload Video</ul>
                             <ul>Go Live</ul>
 
@@ -60,7 +66,7 @@ function Header() {
                             title="Youtube Apps"/></button>
                     {
                     
-                        <div class="dropdownApps dropdown-content">
+                        <div class="dropdownApps dropdown-content dropdown-rightmost">
                             <ul>YouTube TV</ul>
                             <hr/>
                             <ul>Youtube Music</ul>

@@ -3,7 +3,7 @@ import Header from './Components/Header/Header';
 import Sidebar from './Components/Sidebar/Sidebar';
 import Recommended from './Components/Recommended/Recommended';
 import SearchPage from './Components/SearchPage/SearchPage'
-import VideoPlayer from './Components/VideoPlayer/VideoPlayer'
+import VideoPage from './Components/VideoPlayer/VideoPage'
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 
 function App() {
@@ -21,8 +21,8 @@ function App() {
 
                     <Route path="/video/:videoId">
                         <div className="app_page">
-                           <Sidebar/>
-                            <VideoPlayer/>
+                           {/* <Sidebar/> */}
+                            <VideoPage/>
                         </div>
                     </Route>
 
