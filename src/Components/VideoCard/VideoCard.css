@@ -4,8 +4,9 @@
   padding-right: 5px;
 }
 .videocard:hover{
-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.1);
-  transition: 0.3s;
+
+  box-shadow:0 2px 5px 0 rgba(0,0,0,0.1);
+  transition: 0.1s;
   border-radius: 5px;
 }
 .videocard_thumbnail {
