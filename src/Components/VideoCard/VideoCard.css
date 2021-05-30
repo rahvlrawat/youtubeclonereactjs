@@ -2,10 +2,12 @@
   margin-bottom: 50px;
   width: 280px;
   padding-right: 5px;
+  padding-left:1px;
 }
 .videocard:hover{
-box-shadow: 0 1px 4px 0 rgba(0,0,0,0.1);
-  transition: 0.3s;
+
+  box-shadow:0 2px 5px 0 rgba(0,0,0,0.1);
+  transition: 0.1s;
   border-radius: 5px;
 }
 .videocard_thumbnail {
@@ -19,7 +21,7 @@ box-shadow: 0 1px 4px 0 rgba(0,0,0,0.1);
 .videocard_info {
   display: flex;
   margin-top: 10px;
-  padding-right: 30px;
+  padding-right: 20px;
 }
 .videocard_text {
   margin-left: 15px;
@@ -31,7 +33,7 @@ box-shadow: 0 1px 4px 0 rgba(0,0,0,0.1);
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  width: 195px;
+  width: 212px;
 }
 
 .videocard_text > p {

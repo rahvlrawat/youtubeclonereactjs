@@ -17,6 +17,34 @@ const useStyles = makeStyles((theme) => ({
     },
   }));
 
+function replaceURLs(message) {
+    if(!message) return;
+
+    var urlRegex = /(((https?:\/\/)|(www\.))[^\s]+)/g;
+    return message.replace(urlRegex, function (url) {
+        var hyperlink = url;
+        if (!hyperlink.match('^https?://')) {
+        hyperlink = 'http://' + hyperlink;
+        }
+        return '<a href="' + hyperlink + '" target="_blank" rel="noopener noreferrer">' + url + '</a>'
+    });
+}
+
+ 
+
+function NewlineText(props) {
+    const text = props.text;
+    const less=props.less;
+    if(less!=="true"){
+        const newText = text.split('\n').map(str=><p dangerouslySetInnerHTML={{ __html:replaceURLs(str) }}/>);
+        return newText; 
+    }else{
+        const newText = text.split('\n').map(str => <p dangerouslySetInnerHTML={{ __html:replaceURLs(str) }}/>);
+
+        // .map(str => <p>{str}</p>);
+        return newText.slice(1,10); 
+    }
+}
 
  
 const VideoInfo = ({title, description, publishedDate, channelTitle, channelImage, viewCount, likeCount, dislikeCount, subs}) => { 
@@ -77,15 +105,14 @@ const VideoInfo = ({title, description, publishedDate, channelTitle, channelImag
             <div className='videoinfo_channeldesc'>
                 {
                     isClicked?<div>
-                    <p>{description}</p>
+                    <NewlineText text={description}/>
                     <p className="videoInfo_TextLoader" onClick={onClickMore}>Click to Load Less ...</p>
                   </div>
                   :<div>
-                    <p className="beforeDesc">{description}</p> 
+                    <NewlineText text={description} less="true"/>
                     <p className="videoInfo_TextLoader" onClick={onClickMore}>Click to Load More ...</p>
                     </div>
                 }
-                
                 <hr/>
             </div>
             

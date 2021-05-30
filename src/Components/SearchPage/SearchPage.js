@@ -7,9 +7,8 @@ import {useParams} from 'react-router';
 import {Link} from 'react-router-dom'
 import axios from 'axios';
 import {DateTime} from 'luxon';
-import CircularProgress from '@material-ui/core/CircularProgress';
 import Alert from '@material-ui/lab/Alert';
-
+import Skeleton from 'react-loading-skeleton';
 
 function SearchPage() {
     const {searchQuery} = useParams();
@@ -111,10 +110,6 @@ function SearchPage() {
                 <TuneIcon/>
                 <h2 >FILTER</h2>
             </div>
-           { isLoading ? <div className='loading'>
-            <CircularProgress  color='secondary' /> 
-                    <h2>Loading ...</h2>
-                    </div>: null }
             <hr/> {
             !isLoading ? <ChannelRow  
                 channelId={
@@ -135,11 +130,13 @@ function SearchPage() {
                 
                 description={
                     channelRow.description
-                }/> : null
+                }/> : <Skeleton className="skeleton" height={100} count={1}  duration={2} />
+
         }
             <hr/>
             <h2 className="searchpage_text">Latest from {searchQuery}</h2>
             {
+                !isLoading?
             videoRows.map(item => {
                 return (
                     <Link  key={
@@ -177,7 +174,8 @@ function SearchPage() {
                             }    />
                     </Link>
                 )
-            })
+            }): <Skeleton className="skeleton" height={100} count={5}  duration={2} />
+   
         } </div>
     )
 }

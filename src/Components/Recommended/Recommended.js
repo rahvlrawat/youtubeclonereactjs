@@ -62,16 +62,9 @@ function Recommended() {
 
     return (
         <div className="recommended">
-          { isLoading ? 
+          { isLoading ?           
+                  <Skeleton className="skeleton" height={240} width={285} count={25}  duration={2} />
 
-          <div className='loading'>
-          
-                  <Skeleton className="skeleton" height={240} width={285} count={20}  duration={2} >
-                   <Skeleton counts={2} duration={2}/> 
-                  </Skeleton>
-                
-                    </div>  
-                     
                         :
                         <div className="recommended_videos">
                  { 
@@ -92,8 +85,7 @@ function Recommended() {
                   })
                 } 
             </div>
-                        
-                        }
+ }
           
            
         </div>
