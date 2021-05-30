@@ -50,7 +50,7 @@ function Header() {
                             title="Create"/></button>
                     {
                     
-                        <div class="dropdownVideo dropdown-content dropdown-rightmost">
+                        <div className="dropdownVideo dropdown-content dropdown-rightmost">
                             <ul>Upload Video</ul>
                             <ul>Go Live</ul>
 
@@ -66,7 +66,7 @@ function Header() {
                             title="Youtube Apps"/></button>
                     {
                     
-                        <div class="dropdownApps dropdown-content dropdown-rightmost">
+                        <div className="dropdownApps dropdown-content dropdown-rightmost">
                             <ul>YouTube TV</ul>
                             <hr/>
                             <ul>Youtube Music</ul>
@@ -87,7 +87,7 @@ function Header() {
                     </button>
                     {
                     
-                        <div class="dropdown-content dropdown-rightmost">
+                        <div className="dropdown-content dropdown-rightmost">
                             <ul>Notifications</ul>
                             <hr/>
                         </div>
@@ -102,7 +102,7 @@ function Header() {
                 </button>
                 {
                 
-                    <div class="dropdown-content dropdown-rightmost">
+                    <div className="dropdown-content dropdown-rightmost">
                         <ul>Your Channel</ul>
                         <ul>Purchases and memberships</ul>
                         <ul>Youtube Studio</ul>
