@@ -4,7 +4,8 @@
     position: sticky;
     top: 5vh;
     left:0;
-    height:fit-content
+    height:fit-content;
+    
 }
 
 .sidebar > hr{
@@ -15,3 +16,7 @@
     margin-top:10px;
    
 }
+a:-webkit-any-link {
+    text-decoration: none;
+    color: inherit;
+  }

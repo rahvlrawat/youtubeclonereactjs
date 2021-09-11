@@ -12,7 +12,7 @@ import { useHistory } from 'react-router-dom'
 function Header() {
     const [inputSearch, setInputSearch] = useState('');
     const history = useHistory()
-   const handleSubmit = (e) => {
+    const handleSubmit = (e) => {
       e.preventDefault()
       history.push(`/search/${inputSearch}`)
    }

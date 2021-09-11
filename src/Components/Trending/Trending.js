@@ -1,5 +1,5 @@
 import React,{useEffect, useState} from 'react';
-import './Recommended.css';
+import './Trending.css';
 import VideoCard from '../VideoCard/VideoCard.js';
 import axios from 'axios';
 import {DateTime} from 'luxon';
@@ -8,7 +8,7 @@ import {Link} from 'react-router-dom';
 import Alert from '@material-ui/lab/Alert';
 import Skeleton from 'react-loading-skeleton';
 
-function Recommended() {
+function Trending() {
     const [videoCards, setVideoCards] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
     const [isError, setIsError] = useState(false);
@@ -16,11 +16,7 @@ function Recommended() {
     
     useEffect(() => {
         axios
-        //https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=US&maxResults=20&key
-       
-
-
-          .get(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=US&videoCategoryId=20&maxResults=20&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`)
+          .get(`https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&regionCode=US&maxResults=20&key=${process.env.REACT_APP_YOUTUBE_API_KEY}`)
           .then(response => {
             createVideoCards(response.data.items);
           })
@@ -96,4 +92,4 @@ function Recommended() {
     )
 }
 
-export default Recommended
+export default Trending

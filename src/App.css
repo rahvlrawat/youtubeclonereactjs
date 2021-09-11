@@ -1,4 +1,6 @@
+
 .app_page{
-    display:flex
+    display:flex;
+    flex-direction: row;
     
 }

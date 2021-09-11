@@ -9,21 +9,35 @@ import OndemandVideoIcon from '@material-ui/icons/OndemandVideo'
 import WatchLaterIcon from '@material-ui/icons/WatchLater'
 import ThumbUpAltOutlinedIcon from '@material-ui/icons/ThumbUpAltOutlined'
 import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined'
+import {Link} from 'react-router-dom';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import './Sidebar.css'
 
 function Sidebar() {
     return (
         <div className="sidebar">
-            <SidebarRow selected Icon={HomeIcon} title="Home"/>
-            <SidebarRow Icon={WhatshotIcon} title="Trending"/>
-            <SidebarRow Icon={SubscriptionsIcon} title="Subscriptions"/>
+       
+            <Link to="/"><SidebarRow selected Icon={HomeIcon} title="Home"/></Link>
+            
+            <Link to="/trending"><SidebarRow Icon={WhatshotIcon} title="Trending"/></Link>
+            
+            <Link to="/oops_page"><SidebarRow Icon={SubscriptionsIcon} title="Subscriptions"/></Link>
+            
             <hr/>
-            <SidebarRow Icon={VideoLibraryIcon} title="Library"/>
-            <SidebarRow Icon={HistoryIcon} title="History"/>
-            <SidebarRow Icon={OndemandVideoIcon} title="Your Videos"/>
-            <SidebarRow Icon={WatchLaterIcon} title="Watch Later"/>
-            <SidebarRow Icon={ThumbUpAltOutlinedIcon} title="Liked Videos"/>
+            
+            <Link to="/oops_page"><SidebarRow Icon={VideoLibraryIcon} title="Library"/></Link>
+            
+            <Link to="/oops_page"><SidebarRow Icon={HistoryIcon} title="History"/></Link>
+            
+            <Link to="/oops_page"><SidebarRow Icon={OndemandVideoIcon} title="Your Videos"/></Link>
+            
+            <Link to="/oops_page"><SidebarRow Icon={WatchLaterIcon} title="Watch Later"/></Link>
+            
+            <Link to="/oops_page"><SidebarRow Icon={ThumbUpAltOutlinedIcon} title="Liked Videos"/></Link>
+            
+        
             <SidebarRow Icon={ExpandMoreOutlinedIcon} title="Show more"/>  
+           
       
         </div>
     )

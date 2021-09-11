@@ -1,0 +1,14 @@
+
+
+.msg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:50vh;
+    width: 100vw;
+    background: linear-gradient(
+    135deg,
+    rgb(198, 197, 201) 35%,
+    rgb(64, 63, 65) 100%
+  );
+ }
