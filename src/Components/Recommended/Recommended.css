@@ -6,6 +6,7 @@
     min-width:145px;
     height: 100%;
     
+    
 }
 .recommended > h2{
     margin-left:5px;
@@ -15,6 +16,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content:space-around
+    
 }
 .recommendedvideos__videos > * {
     margin-left: 5%;

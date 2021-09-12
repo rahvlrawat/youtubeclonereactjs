@@ -98,7 +98,8 @@ function Header() {
                 <button className="Avatar dropbtn"><Avatar 
                         alt="Rahul Rawat"
                         className="header_avatar"
-                        src="https://yt3.ggpht.com/yti/ANoDKi66W0FyNyLHAV3OZch0vXBPFRQ1-NQJpkXgUKDD=s88-c-k-c0x00ffffff-no-rj-mo"/>
+                        // src="https://yt3.ggpht.com/yti/ANoDKi66W0FyNyLHAV3OZch0vXBPFRQ1-NQJpkXgUKDD=s88-c-k-c0x00ffffff-no-rj-mo"
+                        />
                 </button>
                 {
                 
@@ -107,7 +108,7 @@ function Header() {
                         <ul>Purchases and memberships</ul>
                         <ul>Youtube Studio</ul>
                         <ul>Switch Account</ul>
-                        <ul>Sign Out</ul>
+                        <Link to={{pathname:"/login"}}><ul>Sign In</ul></Link>
                     </div>
                 
             } </div>
